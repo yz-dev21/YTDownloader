@@ -1,11 +1,19 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap');
-
-html, body {
-    font-family: 'JetBrains Mono', monospace;
+﻿@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
 }
 
-.font-thin {
-    font-weight: 400;
+@font-face {
+    font-family: 'S-CoreDream-6Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+html, body {
+    font-family: 'S-Core Dream 4', monospace;
 }
 
 .font-regular {
@@ -16,23 +24,18 @@ html, body {
     font-weight: 600;
 }
 
-.font-heavy {
-    font-weight: 700;
-}
-
-.font-super {
-    font-weight: 800;
-}
-
-.transparent_input {
+.transparent-input {
     outline: none;
     border: none;
     background-color: transparent;
 }
 
-#vr {
-    width: 1px;
-    border-left: solid 1px #dcdcdc;
+.vertical-gap {
+    height: 20px;
+}
+
+.horizontal-gap {
+    width: 20px;
 }
 
 a, .btn-link {

@@ -9,11 +9,29 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Content Remove="Modal.razor" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="Main.razor~RF57da3.TMP" />
+	  <None Remove="Video.cs~RF25db43d.TMP" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebView.WindowsForms" Version="6.0.408" />
+		<PackageReference Include="VideoLibrary" Version="3.1.9" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <UpToDateCheckInput Remove="Modal.razor" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <_ContentIncludedByDefault Remove="Modal.razor" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="Components\Modal.razor" />
 	</ItemGroup>
 
 </Project>

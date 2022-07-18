@@ -36,7 +36,7 @@
             this.blazorWebView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.blazorWebView1.Location = new System.Drawing.Point(0, 0);
             this.blazorWebView1.Name = "blazorWebView1";
-            this.blazorWebView1.Size = new System.Drawing.Size(1282, 703);
+            this.blazorWebView1.Size = new System.Drawing.Size(732, 853);
             this.blazorWebView1.TabIndex = 0;
             this.blazorWebView1.Text = "blazorWebView1";
             // 
@@ -44,8 +44,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1282, 703);
+            this.ClientSize = new System.Drawing.Size(732, 853);
             this.Controls.Add(this.blazorWebView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "YTDownloader2.0";
             this.ResumeLayout(false);
