@@ -33,6 +33,7 @@ namespace YTDownloader2
         }
         public string Path { get; set; }
         public bool Visible { get; set; }
+        public bool BlockSave { get; set; }
         private List<byte> _data;
         public Video()
         {
@@ -41,10 +42,12 @@ namespace YTDownloader2
             Format = Formats.MP3;
             Path = string.Empty;
             Visible = true;
+            BlockSave = false;
             _data = new List<byte>();
         }
         public async Task<Results> Save()
         {
+            BlockSave = true;
             try
             {
                 var youtube = YouTube.Default;
@@ -70,6 +73,7 @@ namespace YTDownloader2
             {
                 return Results.InvalidPath;
             }
+            BlockSave = false;
             return Results.Good;
         }
     }

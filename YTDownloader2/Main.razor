@@ -17,7 +17,7 @@
                         </svg>
                     </button>
                     <!-- Downlaod -->
-                    @if (disableDownloadButton)
+                    @if (video.BlockSave)
                     {
                         <button class="float-end btn btn-outline-primary" @onclick="() => Download(video)" style="margin-right: 50px;" disabled>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
@@ -114,7 +114,6 @@
     private Video theVideo { get; set; } = new();
 
     private bool disableAddButton = false;
-    private bool disableDownloadButton = false;
     private bool editMode = false;
 
     private const int MaxCount = 8;
@@ -126,7 +125,7 @@
 
         videos.Add(video);
 
-                editMode = false;
+        editMode = false;
         modal.Open();
     }
     private void CheckData(Video video)
@@ -142,12 +141,7 @@
     }
     private async void Download(Video video)
     {
-        disableDownloadButton = true;
         var result = await video.Save();
-
-        if (result == Results.Good)
-            disableDownloadButton = false;
-
     }
     private void OpenFileSelector(Video video)
     {
