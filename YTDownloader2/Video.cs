@@ -2,12 +2,12 @@
 
 namespace YTDownloader2
 {
-    enum Formats
+    public enum Formats
     {
         MP3,
         MP4
     }
-    enum Results
+    public enum Results
     {
         Good,
         InvalidUrl,
@@ -16,7 +16,7 @@ namespace YTDownloader2
         InvalidVideo,
         Unknown
     }
-    class Video
+    public class Video
     {
         public string Url { get; set; }
         public string Name { get; set; }
