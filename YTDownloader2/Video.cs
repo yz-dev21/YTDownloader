@@ -53,7 +53,7 @@ namespace YTDownloader2
                 var youtube = YouTube.Default;
                 var video = await youtube.GetVideoAsync(Url);
 
-                if (string.IsNullOrEmpty(Name)) Name = video.FullName;
+                if (Name == Url) Name = video.FullName[..^4];
 
                 _data = (await video.GetBytesAsync()).ToList();
             }

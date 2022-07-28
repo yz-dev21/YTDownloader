@@ -142,6 +142,7 @@
     private async void Download(Video video)
     {
         var result = await video.Save();
+        if (result == Results.Good) StateHasChanged();
     }
     private void OpenFileSelector(Video video)
     {
